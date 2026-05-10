@@ -195,7 +195,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .subsection-label {
   font-family: var(--serif);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-light);
