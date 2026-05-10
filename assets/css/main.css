@@ -198,7 +198,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--ink-light);
   margin-bottom: 0;
   padding-bottom: 14px;
   border-bottom: 0.5px solid var(--border);
