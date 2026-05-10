@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="greeting" id="greeting">Welcome!</div>
+
+    <div class="hero-bio">
+      <p>I am a doctoral student in energy and environmental policy at the Carter School of Public Policy at Georgia Tech.</p>
+      <p>My research uses quasi-experimental methods along with historical and contemporary datasets to study the economics of energy markets, utility regulation, and energy affordability.</p>
+      <p>Much of my work sits at the intersection of public economics, energy policy, and economic history.</p>
+    </div>
+
+    <div class="hero-links">
+      <a href="mailto:ranthony31@gatech.edu">Email me.</a>
+      <a href="/research/">Research</a>
+      <a href="/assets/pdf/cv.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Replace the placeholder below with your actual photo:
+         1. Add your photo to assets/img/profile.jpg
+         2. Uncomment the <img> tag and delete the placeholder <div> -->
+    <!-- <img src="/assets/img/profile.jpg" alt="Ryan Anthony" /> -->
+    <div class="hero-photo-placeholder">[ your photo here ]</div>
+  </div>
+</div>
+
+<script>
+  // Multilingual greeting cycle
+  const greetings = [
+    "Welcome!", "Hola!", "Bonjour!", "Merhaba!", "こんにちは!",
+    "مرحباً!", "Привет!", "你好!", "Olá!", "Ciao!", "안녕하세요!", "Bună ziua!"
+  ];
+  let idx = 0;
+  const el = document.getElementById('greeting');
+
+  setInterval(() => {
+    el.style.opacity = '0';
+    setTimeout(() => {
+      idx = (idx + 1) % greetings.length;
+      el.textContent = greetings[idx];
+      el.style.opacity = '1';
+    }, 350);
+  }, 2800);
+</script>

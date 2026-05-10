@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {% if page.title and page.title != "Home" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}" class="nav-name">Ryan Anthony</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ '/research/' | relative_url }}"{% if page.url contains 'research' %} class="active"{% endif %}>Research</a></li>
+      <li><a href="{{ '/teaching/' | relative_url }}"{% if page.url contains 'teaching' %} class="active"{% endif %}>Teaching</a></li>
+      <li><a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/ryan-anthony" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <span>Ryan Anthony · Georgia Institute of Technology</span>
+    <span><a href="mailto:ranthony31@gatech.edu">ranthony31@gatech.edu</a></span>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
